@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--官方-->
+    <!--    <script src="../../../node_modules/@vue/runtime-dom/dist/runtime-dom.global.js"></script>-->
+    <script src="../dist/runtime-dom.global.js"></script>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+    let {h, render} = VueRuntimeDOM
+
+    render(h("ul", {style: {color: "red"}}, [
+        h("li", {key: "a"}, "a"),
+        h("li", {key: "b"}, "b"),
+        h("li", {key: "c"}, "c"),
+        h("li", {key: "d"}, "d"),
+        h("li", {key: "e"}, "e"),
+        h("li", {key: "gg"}, "gg"),
+        h("li", {key: "f"}, "f"),
+        h("li", {key: "g"}, "g"),
+    ]), document.getElementById("app"));
+
+    setTimeout(() => {
+        render(h("ul", {style: {color: "red"}}, [
+            h("li", {key: "a"}, "a"),
+            h("li", {key: "b"}, "b"),
+            h("li", {key: "e"}, "e"),
+            h("li", {key: "c"}, "c"),
+            h("li", {key: "d"}, "d"),
+            h("li", {key: "h"}, "h"),
+            h("li", {key: "f"}, "f"),
+            h("li", {key: "g"}, "g"),
+        ]), document.getElementById("app"));
+    }, 5000)
+</script>
+</body>
+</html>

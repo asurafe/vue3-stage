@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "buildOptions":{
-    "name":"VueReactivity",
-    "formats":[
+  "buildOptions": {
+    "name": "VueReactivity",
+    "formats": [
       "global",
       "cjs",
       "esm-bundler"

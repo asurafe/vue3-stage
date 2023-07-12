@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入官方的包 -->
+    <!--    <script src="../../../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>-->
+    <!-- 引入打包好的文件 -->
+    <script src="./reactivity.global.js"></script>
+</head>
+
+<body>
+<div id="app"></div>
+
+<script>
+    const {effect, reactive} = VueReactivity
+    const data = {flag: true, name: "张三", age: 20, address: {num: 10}};
+    const state = reactive(data);
+
+    console.log(state.address);
+    effect(() => {
+        document.getElementById("app").innerHTML = `金融港 ${state.address.num} 栋`;
+    })
+
+    setTimeout(() => {
+        state.address.num = 15
+    }, 2000)
+
+</script>
+</body>
+</html>
