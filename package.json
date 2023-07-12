@@ -1,0 +1,17 @@
+{
+  "name": "vue3-stage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.18.11",
+    "minimist": "^1.2.8",
+    "typescript": "^5.1.6"
+  }
+}
